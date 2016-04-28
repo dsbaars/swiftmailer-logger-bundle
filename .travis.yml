@@ -2,12 +2,15 @@ language: php
 sudo: false
 
 php:
+    - 5.5
     - 5.6
     - 7.0
     - hhvm
 
 before_script:
   - composer install --dev
+
+script:
   - vendor/phpspec/phpspec/bin/phpspec run -c phpspec.yml -v
 
 matrix:
@@ -15,7 +18,4 @@ matrix:
     - php: hhvm
   include:
     - php: 5.6
-      env: DEPS="dev"
-  include:
-    - php: 7.0
       env: DEPS="dev"
