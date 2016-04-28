@@ -58,7 +58,7 @@ class SendListener implements Swift_Events_SendListener
         ];
 
         /** @var $logger LoggerInterface */
-        foreach($this->loggers as $logger) {
+        foreach ($this->loggers as $logger) {
             $logger->log($data);
         }
     }

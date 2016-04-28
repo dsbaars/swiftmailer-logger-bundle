@@ -344,13 +344,14 @@ class LoggedMessage
         $this->setBody($message->getBody());
         $this->setGeneratedId($message->getId());
     }
-    
+
     /**
      * Returns a Swift_Message instance that can be sent
-     * 
+     *
      * @return \Swift_Message
      */
-    public function getSwiftMessage(){
+    public function getSwiftMessage()
+    {
         $message = new \Swift_Message();
         $message->setDate($this->getDate()->getTimestamp());
         $message->setFrom($this->getFrom());

@@ -6,11 +6,20 @@ the details of a message that was sent. In the near future, a file logger will b
 
 ## Installation and configuration
 
-Using [Composer][composer], please run the following command to add the bundle to your composer.json and to install it
-immediately:
+Add the bundle to your composer.json:
 
 ```
-composer require tweedegolf/swiftmailer-logger-bundle:dev-master
+{
+    "require": {
+        "tweedegolf/swiftmailer-logger-bundle": "php70-quickfix"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "https://github.com/dsbaars/swiftmailer-logger-bundle.git"
+        }
+    ]
+}
 ```
 
 ### Basic configuration
@@ -79,7 +88,7 @@ tweede_golf_swiftmailer_logger:
    swift_instances:
         - default
         - secondary_smtp
-        
+
     loggers:
         entity_logger:
             enabled: true

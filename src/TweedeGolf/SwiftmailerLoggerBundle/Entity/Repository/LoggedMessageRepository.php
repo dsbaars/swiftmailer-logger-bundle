@@ -8,7 +8,6 @@
 
 namespace TweedeGolf\SwiftmailerLoggerBundle\Entity\Repository;
 
-
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -20,4 +19,4 @@ use Doctrine\ORM\EntityRepository;
 class LoggedMessageRepository extends EntityRepository
 {
   //stub
-} 
+}
